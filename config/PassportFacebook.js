@@ -8,7 +8,7 @@ const User = require('../Models/Users');
 //const findOrCreate = require('mongoose-findorcreate')
 
 passport.use(new FacebookStrategy({
-    clientID: 444425035971110,
+    clientID: '#',
     clientSecret: 'secret',
     callbackURL: "http://localhost:3000",
     profileFields: ['id', 'displayName', 'name', 'gender', 'photos'],
