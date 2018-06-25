@@ -1,0 +1,31 @@
+{
+  "name": "JBlog",
+  "version": "1.0.0",
+  "description": "tegan ballotti/s site",
+  "main": "index.ejs",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "start": "node index.ejs"
+  },
+  "author": "Jordon Buchanan",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "bootstrap": "^4.0.0",
+    "cloudinary": "^1.11.0",
+    "ejs": "^2.5.7",
+    "express": "^4.16.3",
+    "express-session": "^1.15.6",
+    "jquery": "^3.3.1",
+    "jquery-ui": "^1.12.1",
+    "method-override": "^2.3.10",
+    "moment": "^2.22.2",
+    "mongoose": "^5.1.6",
+    "multer": "^1.3.0",
+    "nodemon": "^1.17.5",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
+    "path": "^0.12.7",
+    "popper.js": "^1.14.1"
+  }
+}
