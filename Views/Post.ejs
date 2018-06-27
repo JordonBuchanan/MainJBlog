@@ -1,0 +1,45 @@
+<% include partials/header %>
+
+
+<div class="container">
+    <div class="row">
+        <div class="col-sm-12">
+            <h1>Create a New Blog Post:</h1>
+            <form action="/" method="POST" enctype="multipart/form-data">
+                <div class="form-group">
+                    <input type="text" name="name" value="" class="form-control" placeholder="Title" required>
+                </div>
+                <div class="form-group">
+                    <input class="form-control" type="file" id="image" name="image" accept="image/*">
+                </div>
+                <div class="form-group">
+                    <select name="icon" id="icon" class="custom-select">
+                        <option selected>Subject Select</option>
+                        <option value="fab fa-python">Python</option>
+                        <option value="fab fa-react">React</option>
+                        <option value="fab fa-node-js">NodeJs</option>
+                        <option value="fab fa-js-square">Javascript</option>
+                        <option value="fab fa-html5">HTML</option>
+                        <option value="fab fa-css3-alt">CSS</option>
+                        <option value="fab fa-angular">Angular</option>
+                        <option value="fas fa-code">General Coding</option>
+                        <option value="fas fa-dumbbell">Fitness</option>
+                        <option value="fas fa-pencil-alt">Writing</option>
+                        <option value="fas fa-comment">Opinion</option>
+                      </select>
+                  </div>
+                <div class="form-group">
+                    <textarea class="form-control" name="textField" value="" id="textField" rows="3" placeholder="Body" required></textarea>
+                </div>
+                <div class="form-group">
+                    <input type="text" name="tags" value="" class="form-control" placeholder="tags">
+                </div>
+                <div class="form-group">
+                    <button class="btn btn-secondary btn-lg btn-block">Post</button>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+
+<% include partials/footer %>

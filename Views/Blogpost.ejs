@@ -1,0 +1,19 @@
+<% include partials/header %>
+
+    <div class="col-sm-12 contentDiv">
+      <div class="subjectHead"><i class="<%= Posts.icon %> postCon"></i></div>
+      <h4><%= Posts.name %></h4>
+      <small class="date"><%= moment(Posts.createdAt).fromNow() %></small>
+      <p class="bodyText">
+          <%= Posts.textField %>
+      </p>
+      <small class="tags">Tags: <a href="#"><%= Posts.tags %></a></small>
+      <p>
+        <a href="/blog">Go Back</a>
+      </p>
+      <form action="/<%= Posts._id %>?_method=DELETE" method="POST">
+        <button class="btn btn-danger btn-lg btn-block">Delete Post</button>
+    </form>
+    </div>
+
+<% include partials/footer %>

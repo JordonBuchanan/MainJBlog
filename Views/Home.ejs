@@ -40,36 +40,20 @@
             </div>
         </div>
         <div class="col-sm-8">
+          <% Posts.forEach(function(Posts){ %>
           <div class="col-sm-12 contentDiv">
-            <div class="subjectHead"><i class="fab fa-react postCon"></i></div>
-            <h4>My Intro Blog Post</h4>
-            <small class="date">June 2X 2018</small>
-            <p class="bodyText">Hey Guys. Its me, Jordon and welcome to my blog and stuff
-                                This is just placeholder text so I can style properly. I need to
-                                work on the code soon as well. is this long enough?
+            <div class="subjectHead"><i class="<%= Posts.icon %> postCon"></i></div>
+            <h4><%= Posts.name %></h4>
+            <small class="date"><%= moment(Posts.createdAt).fromNow() %></small>
+            <p class="bodyText blogPrevText">
+                <%= Posts.textField %>
             </p>
-            <small class="tags">Tags: <a href="#">React</a> <a href="#">Frontend</a></small>
+            <small>
+                <a class="readMore" href="/<%= Posts._id %>">Read More...</a>
+            </small></br>
+            <small class="tags">Tags: <a href="#"><%= Posts.tags %></a></small>
           </div>
-          <div class="col-sm-12 contentDiv">
-            <div class="subjectHead"><i class="fab fa-python postCon"></i></div>
-            <h4>My Intro Blog Post</h4>
-            <small class="date">June 2X 2018</small>
-            <p class="bodyText">Hey Guys. Its me, Jordon and welcome to my blog and stuff
-                                This is just placeholder text so I can style properly. I need to
-                                work on the code soon as well. is this long enough?
-            </p>
-            <small class="tags">Tags: <a href="#">React</a> <a href="#">Frontend</a></small>
-          </div>
-          <div class="col-sm-12 contentDiv">
-            <div class="subjectHead"><i class="fab fa-node-js postCon"></i></div>
-            <h4>My Intro Blog Post</h4>
-            <small class="date">June 2X 2018</small>
-            <p class="bodyText">Hey Guys. Its me, Jordon and welcome to my blog and stuff
-                                This is just placeholder text so I can style properly. I need to
-                                work on the code soon as well. is this long enough?
-            </p>
-            <small class="tags">Tags: <a href="#">React</a> <a href="#">Frontend</a></small>
-          </div>
+          <% }); %>
         </div>
       </div>
     </div>

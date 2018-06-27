@@ -43,8 +43,8 @@ app.use('/', indexRouter);
 const db = require('./config/keys').mongoURI;
 mongoose
     .connect(db)
-    .then(() => console.log('MongoDB connected')
-    .catch(error => console.log(error)));
+    .catch(error => console.log(error))
+    .then(() => console.log('MongoDB connected'));
     mongoose.set('debug', true);
     process.on('unhandledRejection', (reason, p) => {
         console.log('Unhandled Rejection at: Promise', p, 'reason:', reason);
@@ -70,14 +70,14 @@ app.use(function(req, res, next){
 require('./config/PassportFacebook');
 
 // error handler
-app.use(function(err, req, res, next) {
+/* app.use(function(err, req, res, next) {
     // set locals, only providing error in development
     res.locals.message = err.message;
     res.locals.error = req.app.get('env') === 'development' ? err : {};
     // render the error page
     res.status(err.status || 500);
     res.render('error');
-  });
+  }); */
 
 //================
 //LISTEN
