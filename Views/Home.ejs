@@ -32,10 +32,9 @@
             <div class="col-sm-12 recentDiv">
                 <p class="lead">Tags</p>
                 <ul>
-                  <li><a href="#">Frontend</a></li>
-                  <li><a href="#">React</a></li>
-                  <li><a href="#">Python</a></li>
-                  <li><a href="#">Javascript</a></li>
+                  <% Posts.forEach(function(Posts){ %>
+                  <li><%= Posts.tags %></li>
+                  <% }); %>
                 </ul>
             </div>
         </div>
@@ -51,7 +50,7 @@
             <small>
                 <a class="readMore" href="/<%= Posts._id %>">Read More...</a>
             </small></br>
-            <small class="tags">Tags: <a href="#"><%= Posts.tags %></a></small>
+            <small class="tags">Tags: <a href="#<%= Posts.tags %>"><%= Posts.tags %></a></small>
           </div>
           <% }); %>
         </div>

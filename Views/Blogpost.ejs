@@ -9,8 +9,9 @@
       </p>
       <small class="tags">Tags: <a href="#"><%= Posts.tags %></a></small>
       <p>
-        <a href="/blog">Go Back</a>
+        <a href="/">Go Back</a>
       </p>
+      <a class="" href="/<%= Posts._id %>/edit">Edit Post</a>
       <form action="/<%= Posts._id %>?_method=DELETE" method="POST">
         <button class="btn btn-danger btn-lg btn-block">Delete Post</button>
     </form>

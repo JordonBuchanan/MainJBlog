@@ -79,11 +79,11 @@ html, body {
     background-size: cover;
   }
   #about{
-    background: linear-gradient(to bottom, black, rgba(0,0,0,0.8));
+    background-image:url(/static/images/JBLOGBG4.jpg);
+    background-repeat: no-repeat;
     background-size:cover;
     position: top;
     color: white;
-    border-bottom: 1px solid white;
     border-top: 1px solid white;
     box-shadow: 0px 10px 5px black;
   }
@@ -105,14 +105,14 @@ hr{
     margin-top:75px;
   }
   .recentDiv{
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 1em;
+    background: linear-gradient(to bottom, black, rgba(0,0,0,0.8));
+    box-shadow: 1px 1px 4px rgba(255,255,255,0.1);
     padding: 25px;
     margin-bottom: 10px;
   }
   .contentDiv{
-    background-color: rgba(255,255,255,0.1);
-    border-radius: 1em;
+    background: linear-gradient(to bottom, black, rgba(0,0,0,0.8));
+    box-shadow: 1px 1px 4px rgba(255,255,255,0.1);
     padding:25px;
     margin: 35px auto 60px;
   }
@@ -133,7 +133,6 @@ hr{
   }
   .navbar-dark{
     background-color: rgba(0,0,0,0.8) !important;
-    box-shadow: 0 0 8px white;
   }
   .bodyText{
     margin: 10px;
@@ -158,8 +157,9 @@ hr{
     color: rgba(255,255,255,0.8);
   }
   .subjectHead{
-    color: black;
-    background:linear-gradient(to top, gray, white);
+    color: white;
+    background-color: black;
+
     width: 100px;
     height: 100px;
     border-radius: 10em;

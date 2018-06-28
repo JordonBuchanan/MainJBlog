@@ -4,16 +4,16 @@
 <div class="container">
     <div class="row">
         <div class="col-sm-12">
-            <h1>Create a New Blog Post:</h1>
-            <form action="/" method="POST" enctype="multipart/form-data">
+            <h1>Editing <%= Posts.name %>:</h1>
+            <form action="/<%= Posts._id %>/?_method=PUT" method="POST">
                 <div class="form-group">
-                    <input type="text" name="name" value="" class="form-control" placeholder="Title" required>
+                    <input type="text" name="Posts[name]" value="<%= Posts.name %>" class="form-control" placeholder="Title" required>
                 </div>
                 <div class="form-group">
                     <input class="form-control" type="file" id="image" name="image" accept="image/*">
                 </div>
                 <div class="form-group">
-                    <select name="icon" id="icon" value="" class="custom-select">
+                    <select name="Posts[icon]" id="icon" value="<%= Posts.icon %>" class="custom-select">
                         <option selected>Subject Select</option>
                         <option value="fab fa-python">Python</option>
                         <option value="fab fa-react">React</option>
@@ -29,10 +29,10 @@
                       </select>
                   </div>
                 <div class="form-group">
-                    <textarea class="form-control" name="textField" value="" id="textField" rows="3" placeholder="Body" required></textarea>
+                    <input type="text" class="form-control" name="Posts[textField]" value="<%= Posts.textField %>" id="textField" rows="3" placeholder="Body" required>
                 </div>
                 <div class="form-group">
-                    <input type="text" name="tags" value="" class="form-control" placeholder="tags">
+                    <input type="text" name="Posts[tags]" value="<%= Posts.tags %>" class="form-control" placeholder="tags">
                 </div>
                 <div class="form-group">
                     <button class="btn btn-secondary btn-lg btn-block">Post</button>

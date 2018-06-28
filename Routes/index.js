@@ -63,6 +63,12 @@ router.get("/:id", (req, res, next) => {
   })
 });
 
+router.get("/:id/edit", (req, res) => {
+  Posts.findById(req.params.id, (err, foundPosts) => {
+      res.render("Edit", {Posts: foundPosts});
+  });
+});
+
 //================
 //POST Route
 //================
@@ -89,6 +95,16 @@ router.get("/:id", (req, res, next) => {
 //===========
 //PUT Route
 //===========
+
+router.put("/:id", (req, res) => {
+  Posts.findByIdAndUpdate(req.params.id, req.body.Posts, (err, updatedPosts) => {
+      if(err){
+          res.redirect("/");
+      } else {
+          res.redirect("/" + req.params.id);
+      }
+  });
+});
 
 //=================
 //DESTROY Route
